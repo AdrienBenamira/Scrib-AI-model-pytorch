@@ -6,5 +6,31 @@
         "name": "worker_name",
         "password": "worker_password"
     },
-    "pythonPath": "/usr/bin/python2.7"
+    "pythonPath": "/usr/bin/python2.7",
+    "models": {
+        "name": "model_name",
+        "vocabulary": {
+            "input": 5000,
+            "output": 5000
+        },
+        "summary": {
+            "batch_size": 10,
+            "input_size": 300,
+            "hidden_size": 100,
+            "output_size": 300,
+            "dropout": 0.05,
+            "encoder": {
+                "num_layers": 2,
+                "bidirectional": true
+            },
+            "decoder": {
+                "num_layers": 2,
+                "bidirectional": true
+            }
+        },
+        "metric": {
+            "input_size": 1000,
+            "hidden_size": 500
+        }
+    }
 }
