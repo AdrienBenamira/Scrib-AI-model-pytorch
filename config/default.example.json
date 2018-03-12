@@ -1,0 +1,10 @@
+{
+    "debug": false,
+    "host": "localhost",
+    "port": 8080,
+    "auth": {
+        "name": "worker_name",
+        "password": "worker_password"
+    },
+    "pythonPath": "/usr/bin/python2.7"
+}

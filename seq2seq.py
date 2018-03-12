@@ -9,7 +9,7 @@ from torch import optim
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from Utils import masked_cross_entropy
-from modele import EncoderRNN, DecoderStep
+from model import EncoderRNN, DecoderStep
 from prepare_data import indextoword, indexes_from_sentence, wordtoindex, pairs_test, random_batch, pairs_train
 
 USE_CUDA = torch.cuda.is_available()

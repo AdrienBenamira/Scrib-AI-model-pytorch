@@ -121,6 +121,28 @@ class ScribAPI:
         response.raise_for_status()
         return response.text
 
+    def get_preferences(self, model):
+        """
+        Get all preferences for training
+        :param model: model name
+        :return:
+        """
+        url = self.api_endpoint + 'preference?model=' + model
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+
+    def add_preference_number_of_view(self, preference_id):
+        """
+        Set a preference as treated
+        :param preference_id:
+        :return:
+        """
+        url = self.api_endpoint + "preference/treated?id=" + str(preference_id)
+        response = requests.post(url)
+        response.raise_for_status()
+        return response.text
+
     @staticmethod
     def import_config(file):
         """
@@ -128,7 +150,7 @@ class ScribAPI:
         :param file: location relative to the current file
         :return: config
         """
-        config_path = path.abspath(path.join(path.dirname(__file__), file))
+        config_path = path.abspath(path.join(path.dirname(__file__), '..', file))
         with open(config_path, 'r') as config_file:
             config = json.loads(config_file.read())
         config['url'] = 'http://' + config['host'] + ':' + str(config['port'])

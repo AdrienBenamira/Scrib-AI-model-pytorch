@@ -1,8 +1,8 @@
 import os
-from ScribAPI import ScribAPI
+from utils.ScribAPI import ScribAPI
 import requests
 from utils import tokenize
-from datasets.ScribDataset import ScribDataset
+from utils import ScribDataset
 
 
 def get_article(file):
