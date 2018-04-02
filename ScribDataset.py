@@ -1,10 +1,11 @@
 import random as rd
+
 import torch
-from torch.utils.data import Dataset
 import torchtext.vocab as vocab
 from nltk.tokenize import sent_tokenize, word_tokenize
+from torch.utils.data import Dataset
 
-from utils import get_vector_article, pad_sequence
+from utils_data import get_vector_article, pad_sequence
 
 
 class ScribDataset(Dataset):

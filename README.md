@@ -1,1 +1,3 @@
-# Seq2Seq_pytorch
+# Scrib-AI pytorch model
+
+Work in progress
